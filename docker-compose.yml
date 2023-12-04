@@ -1,0 +1,12 @@
+version: '3'
+services:
+  api-products:
+    image: bitnami/mongodb:latest
+    ports: 
+      - 27017:27017
+    
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MONGODB_PASSWORD=docker
+      - MONGODB_USERNAME=docker
+      - MONGODB_DATABASE=api-products-db
